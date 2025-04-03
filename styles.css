@@ -70,3 +70,7 @@ body {
   height: 400px;
   width: 400px;
 }
+
+circle {
+  stroke: #183b4e;
+}
