@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,8 @@ body {
   height: 100vh;
   justify-content: center;
   justify-items: center;
-  font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu Mono", monospace;
+  background: #9ec6f3;
 }
 
 .timer {
@@ -32,11 +35,16 @@ body {
 }
 
 .controls input {
+  margin-bottom: 12px;
   display: block;
   width: 240px;
+  color: #183b4e;
+  font-family: inherit;
+  font-weight: bold;
   font-size: 96px;
   text-align: center;
   border: none;
+  background-color: transparent;
 }
 
 .controls input:focus {
@@ -47,6 +55,11 @@ body {
   border: none;
   font-size: 36px;
   cursor: pointer;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 16px;
+  background-color: #183b4e;
+  color: #fff;
 }
 
 .controls button:focus {
