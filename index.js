@@ -8,16 +8,16 @@ const perimeter = circle.getAttribute("r") * 2 * Math.PI;
 circle.setAttribute("stroke-dasharray", perimeter);
 
 let duration;
-let isReset = false;
+let wasPaused = false;
 const timer = new Timer(durationInput, startButton, pauseButton, resetButton, {
   onStart(totalDuration) {
-    if (!duration || isReset) duration = totalDuration;
+    if (!duration || wasPaused) duration = totalDuration;
   },
-  onTick(timeRemaining) {
-    circle.setAttribute("stroke-dashoffset", (perimeter * timeRemaining) / duration - perimeter);
+  onTick(timeRemaining, totalDuration) {
+    circle.setAttribute("stroke-dashoffset", (perimeter * timeRemaining) / totalDuration - perimeter);
   },
   onReset(resetDuration) {
-    isReset = true;
+    wasPaused = true;
     duration = resetDuration;
     circle.setAttribute("stroke-dashoffset", 0);
   },
